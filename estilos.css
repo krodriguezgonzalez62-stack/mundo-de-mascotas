@@ -1,0 +1,572 @@
+
+/* =====================================
+   1. CONFIGURACIÓN GENERAL
+===================================== */
+
+:root {
+    --fondo: #f7faf8;
+    --superficie: #ffffff;
+    --texto: #18352c;
+    --secundario: #526b61;
+    --principal: #16785b;
+    --principal-oscuro: #0e5a44;
+    --borde: #dbe8e0;
+    --sombra: 0 12px 30px rgba(14, 65, 47, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.65;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: var(--principal);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.contenedor {
+    width: min(1120px, 92%);
+    margin: auto;
+}
+
+
+/* =====================================
+   2. ENCABEZADO Y NAVEGACIÓN
+===================================== */
+
+.cabecera {
+    background: linear-gradient(125deg, #e5f6ed, #f8fbf9);
+}
+
+.navegacion {
+    min-height: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+}
+
+.marca {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--texto);
+    text-decoration: none;
+}
+
+.enlaces-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.enlaces-menu a {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--texto);
+    text-decoration: none;
+}
+
+.enlaces-menu a:hover {
+    color: var(--principal);
+}
+
+.boton-menu {
+    display: none;
+}
+
+
+/* =====================================
+   3. PRESENTACIÓN PRINCIPAL
+===================================== */
+
+.presentacion {
+    padding: 65px 0 85px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 48px;
+}
+
+.presentacion h1 {
+    font-size: clamp(2rem, 4.5vw, 3.7rem);
+    line-height: 1.13;
+    margin: 14px 0;
+}
+
+.presentacion p {
+    font-size: 1.1rem;
+    color: var(--secundario);
+}
+
+.etiqueta {
+    font-weight: 700;
+    color: var(--principal);
+}
+
+.presentacion figure {
+    margin: 0;
+}
+
+.presentacion img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: var(--sombra);
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: var(--secundario);
+    text-align: center;
+}
+
+
+/* =====================================
+   4. BOTONES
+===================================== */
+
+.boton,
+.filtro {
+    display: inline-block;
+    background: var(--principal);
+    color: white;
+    border: 2px solid var(--principal);
+    padding: 11px 18px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.boton:hover,
+.filtro:hover {
+    background: var(--principal-oscuro);
+    transform: translateY(-2px);
+    color: white;
+    text-decoration: none;
+}
+
+.boton-secundario {
+    background: transparent;
+    color: var(--principal);
+}
+
+.boton-secundario:hover {
+    color: white;
+}
+
+
+/* =====================================
+   5. SECCIONES
+===================================== */
+
+.seccion {
+    padding: 65px 0;
+    border-bottom: 1px solid var(--borde);
+}
+
+.seccion h2 {
+    font-size: clamp(1.65rem, 3vw, 2.3rem);
+    margin: 0 0 10px;
+}
+
+.encabezado-seccion {
+    margin-bottom: 26px;
+}
+
+.encabezado-seccion p,
+.seccion > p {
+    color: var(--secundario);
+}
+
+
+/* =====================================
+   6. TARJETAS DE MASCOTAS
+===================================== */
+
+.rejilla {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.tarjeta {
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: transform 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    display: block;
+}
+
+.tarjeta > div {
+    padding: 18px;
+}
+
+.tarjeta h3 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+}
+
+.tarjeta p {
+    margin: 0;
+    color: var(--secundario);
+    font-size: 0.95rem;
+}
+
+
+/* =====================================
+   7. FILTROS Y TABLA
+===================================== */
+
+.filtros {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.filtro {
+    background: transparent;
+    color: var(--principal);
+}
+
+.filtro.activo {
+    background: var(--principal);
+    color: white;
+}
+
+.tabla-desplazable {
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: var(--superficie);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+caption {
+    text-align: left;
+    font-weight: 700;
+    padding: 12px 0;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 14px;
+    border-bottom: 1px solid var(--borde);
+}
+
+th {
+    background: var(--principal);
+    color: #ffffff;
+}
+
+tbody tr:hover {
+    background: rgba(22, 120, 91, 0.07);
+}
+
+
+/* =====================================
+   8. CUIDADOS Y ADOPCIÓN
+===================================== */
+
+.cuidados {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.aviso {
+    margin-top: 24px;
+    background: #e5f6ed;
+    border-left: 5px solid var(--principal);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.aviso h3 {
+    margin-top: 0;
+}
+
+
+/* =====================================
+   9. FORMULARIO
+===================================== */
+
+form {
+    max-width: 800px;
+    background: var(--superficie);
+    padding: 28px;
+    border: 1px solid var(--borde);
+    border-radius: 16px;
+    box-shadow: var(--sombra);
+}
+
+.campos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    margin: 0 0 6px;
+}
+
+input:not([type="checkbox"]),
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #a9bdb1;
+    border-radius: 8px;
+    background: var(--superficie);
+    color: var(--texto);
+    margin-bottom: 17px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid #91d5bb;
+    outline-offset: 1px;
+}
+
+.casilla {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    font-weight: 400;
+}
+
+.acciones {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.mensaje {
+    font-weight: 700;
+    min-height: 25px;
+}
+
+.mensaje.error {
+    color: #a52929;
+}
+
+.mensaje.exito {
+    color: var(--principal);
+}
+
+
+/* =====================================
+   10. PIE DE PÁGINA
+===================================== */
+
+.pie {
+    padding: 30px 0;
+    background: #153d30;
+    color: white;
+}
+
+.pie .contenedor {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.pie a {
+    color: #b5f3d7;
+}
+
+
+/* =====================================
+   11. TEMA OSCURO
+===================================== */
+
+body.tema-oscuro {
+    --fondo: #13231e;
+    --superficie: #1d342a;
+    --texto: #effaf4;
+    --secundario: #c0d5c8;
+    --principal: #7bdbad;
+    --principal-oscuro: #307b59;
+    --borde: #3c5b4b;
+    --sombra: none;
+}
+
+body.tema-oscuro .cabecera {
+    background: linear-gradient(125deg, #203e30, #13231e);
+}
+
+body.tema-oscuro .aviso {
+    background: #244735;
+}
+
+body.tema-oscuro .boton:not(.boton-secundario),
+body.tema-oscuro .filtro.activo {
+    color: #10291e;
+}
+
+body.tema-oscuro th {
+    color: #10291e;
+}
+
+body.tema-oscuro .pie {
+    background: #0b1912;
+}
+
+
+/* =====================================
+   12. DISEÑO PARA TABLETAS
+===================================== */
+
+@media (max-width: 900px) {
+
+    .rejilla {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .presentacion {
+        gap: 22px;
+    }
+
+    .presentacion img {
+        height: 290px;
+    }
+
+    .enlaces-menu {
+        gap: 9px;
+    }
+
+}
+
+
+/* =====================================
+   13. DISEÑO PARA CELULARES
+===================================== */
+
+@media (max-width: 650px) {
+
+    .navegacion {
+        flex-wrap: wrap;
+        padding: 15px 0;
+    }
+
+    .boton-menu {
+        display: block;
+        background: var(--superficie);
+        color: var(--texto);
+        border: 1px solid var(--borde);
+        border-radius: 8px;
+        padding: 8px 12px;
+    }
+
+    .enlaces-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .enlaces-menu.abierto {
+        display: flex;
+    }
+
+    .enlaces-menu a {
+        padding: 10px;
+        border-top: 1px solid var(--borde);
+    }
+
+    .presentacion {
+        grid-template-columns: 1fr;
+        padding: 35px 0 55px;
+    }
+
+    .presentacion img {
+        height: 260px;
+    }
+
+    .rejilla,
+    .cuidados,
+    .campos {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion {
+        padding: 45px 0;
+    }
+
+    form {
+        padding: 18px;
+    }
+
+    .pie .contenedor {
+        display: block;
+    }
+
+}
+
+
+/* =====================================
+   14. ACCESIBILIDAD
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+
+}

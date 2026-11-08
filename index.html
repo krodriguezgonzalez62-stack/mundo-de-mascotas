@@ -1,0 +1,470 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Conoce razas de perros y gatos y aprende sobre sus cuidados.">
+
+    <title>Mundo de Mascotas | Razas y Cuidados</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header id="inicio" class="cabecera">
+
+    <nav class="navegacion contenedor" aria-label="Navegación principal">
+
+        <a class="marca" href="#inicio">🐾 Mundo de Mascotas</a>
+
+        <button id="boton-menu" class="boton-menu" type="button"
+            aria-expanded="false" aria-controls="enlaces-menu">
+            ☰ Menú
+        </button>
+
+        <div id="enlaces-menu" class="enlaces-menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#perros">Perros</a>
+            <a href="#gatos">Gatos</a>
+            <a href="#comparacion">Comparación</a>
+            <a href="#cuidados">Cuidados</a>
+            <a href="#formulario">Formulario</a>
+        </div>
+
+    </nav>
+
+    <div class="presentacion contenedor">
+
+        <div>
+            <span class="etiqueta">Aprende sobre tus mejores compañeros</span>
+
+            <h1>Conoce el maravilloso mundo de las mascotas</h1>
+
+            <p>
+                Descubre razas de perros y gatos, sus características
+                y los cuidados que necesitan para vivir sanos y felices.
+            </p>
+
+            <a class="boton" href="#perros">Explorar razas</a>
+
+            <button class="boton boton-secundario" id="boton-tema" type="button">
+                Cambiar tema
+            </button>
+        </div>
+
+        <figure>
+            <img src="imagenes/portada.jpeg"
+                alt="Un perro y un gato descansando juntos">
+
+            <figcaption>
+                El respeto y el cuidado son esenciales para todas las mascotas
+            </figcaption>
+        </figure>
+
+    </div>
+
+</header>
+
+
+<main class="contenedor">
+
+    <!-- SECCIÓN DE PERROS -->
+
+    <section id="perros" class="seccion">
+
+        <div class="encabezado-seccion">
+            <h2>Razas de perros</h2>
+
+            <p>
+                Los perros necesitan compañía, ejercicio,
+                alimentación adecuada y atención veterinaria.
+            </p>
+        </div>
+
+        <div class="rejilla">
+
+            <article class="tarjeta">
+                <img src="imagenes/labrador.jpeg" alt="Perro labrador retriever">
+
+                <div>
+                    <h3>Labrador retriever</h3>
+                    <p>
+                        Suele ser sociable y activo.
+                        Necesita ejercicio diario y compañía.
+                    </p>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <img src="imagenes/pastor-aleman.jpeg" alt="Perro pastor alemán">
+
+                <div>
+                    <h3>Pastor alemán</h3>
+                    <p>
+                        Es conocido por su inteligencia y necesita
+                        entrenamiento y actividad física.
+                    </p>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <img src="imagenes/chihuahua.jpeg" alt="Perro chihuahua">
+
+                <div>
+                    <h3>Chihuahua</h3>
+                    <p>
+                        Es una raza pequeña que necesita
+                        un trato cuidadoso y protección.
+                    </p>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <img src="imagenes/golden.jpeg" alt="Perro golden retriever">
+
+                <div>
+                    <h3>Golden retriever</h3>
+                    <p>
+                        Suele ser amistoso y disfruta de la actividad
+                        y la interacción con las personas.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- SECCIÓN DE GATOS -->
+
+    <section id="gatos" class="seccion">
+
+        <div class="encabezado-seccion">
+            <h2>Razas de gatos</h2>
+
+            <p>
+                Los gatos necesitan un ambiente seguro,
+                agua fresca, alimentación apropiada y momentos de juego.
+            </p>
+        </div>
+
+        <div class="rejilla">
+
+            <article class="tarjeta">
+                <img src="imagenes/persa.jpeg" alt="Gato persa">
+
+                <div>
+                    <h3>Persa</h3>
+                    <p>
+                        Tiene pelo largo y necesita cepillado frecuente.
+                    </p>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <img src="imagenes/siames.jpeg" alt="Gato siamés">
+
+                <div>
+                    <h3>Siamés</h3>
+                    <p>
+                        Suele ser comunicativo y necesita un ambiente
+                        seguro y momentos de juego.
+                    </p>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <img src="imagenes/maine-coon.jpeg" alt="Gato Maine Coon">
+
+                <div>
+                    <h3>Maine Coon</h3>
+                    <p>
+                        Es un gato grande de pelaje abundante
+                        que requiere cepillado regular.
+                    </p>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <img src="imagenes/domestico.jpeg" alt="Gato doméstico">
+
+                <div>
+                    <h3>Gato doméstico</h3>
+                    <p>
+                        Puede tener muchos colores, tamaños
+                        y personalidades diferentes.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- TABLA COMPARATIVA -->
+
+    <section id="comparacion" class="seccion">
+
+        <h2>Comparación de razas</h2>
+
+        <p>
+            Selecciona un tipo de mascota para consultar sus características.
+        </p>
+
+        <div class="filtros" role="group" aria-label="Filtrar mascotas">
+
+            <button class="filtro activo" type="button" data-filtro="todos">
+                Todas
+            </button>
+
+            <button class="filtro" type="button" data-filtro="Perro">
+                Perros
+            </button>
+
+            <button class="filtro" type="button" data-filtro="Gato">
+                Gatos
+            </button>
+
+        </div>
+
+        <div class="tabla-desplazable">
+
+            <table>
+
+                <caption>Características generales de algunas mascotas</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Raza</th>
+                        <th scope="col">Animal</th>
+                        <th scope="col">Tamaño</th>
+                        <th scope="col">Cuidado principal</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr data-animal="Perro">
+                        <td>Labrador retriever</td>
+                        <td>Perro</td>
+                        <td>Mediano a grande</td>
+                        <td>Ejercicio diario</td>
+                    </tr>
+
+                    <tr data-animal="Perro">
+                        <td>Chihuahua</td>
+                        <td>Perro</td>
+                        <td>Pequeño</td>
+                        <td>Trato cuidadoso</td>
+                    </tr>
+
+                    <tr data-animal="Gato">
+                        <td>Persa</td>
+                        <td>Gato</td>
+                        <td>Mediano</td>
+                        <td>Cepillado frecuente</td>
+                    </tr>
+
+                    <tr data-animal="Gato">
+                        <td>Maine Coon</td>
+                        <td>Gato</td>
+                        <td>Grande</td>
+                        <td>Cepillado regular</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <p id="resultado-filtro" aria-live="polite">
+            Se muestran todas las mascotas.
+        </p>
+
+    </section>
+
+
+    <!-- CUIDADOS -->
+
+    <section id="cuidados" class="seccion">
+
+        <h2>Cuidados básicos</h2>
+
+        <div class="rejilla cuidados">
+
+            <article class="tarjeta">
+                <div>
+                    <h3>🥗 Alimentación</h3>
+                    <p>
+                        Ofrece alimentos adecuados para la especie,
+                        edad y necesidades de cada mascota.
+                    </p>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <div>
+                    <h3>🩺 Salud e higiene</h3>
+                    <p>
+                        Programa visitas veterinarias,
+                        mantén las vacunas al día y cuida su higiene.
+                    </p>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <div>
+                    <h3>🎾 Actividad y compañía</h3>
+                    <p>
+                        Dedica tiempo al juego, al ejercicio
+                        y a la interacción respetuosa.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+        <aside class="aviso">
+
+            <h3>Adopción responsable</h3>
+
+            <p>
+                Antes de adoptar, considera el tiempo, el espacio
+                y los recursos necesarios para cuidar una mascota
+                durante toda su vida.
+            </p>
+
+            <p>
+                Consulta más información en
+                <a href="https://www.aspca.org/pet-care"
+                   target="_blank" rel="noopener noreferrer">
+                    ASPCA: cuidado de mascotas
+                </a>.
+            </p>
+
+        </aside>
+
+    </section>
+
+
+    <!-- FORMULARIO -->
+
+    <section id="formulario" class="seccion">
+
+        <h2>Comparte tus preferencias</h2>
+
+        <p>
+            Cuéntanos qué mascotas te gustan.
+            Este formulario es una demostración académica
+            y no envía información a un servidor.
+        </p>
+
+        <form id="formulario-mascotas" novalidate>
+
+            <div class="campos">
+
+                <div>
+                    <label for="nombre">Nombre completo *</label>
+                    <input id="nombre" name="nombre" type="text"
+                        maxlength="80" autocomplete="name" required>
+                </div>
+
+                <div>
+                    <label for="correo">Correo electrónico *</label>
+                    <input id="correo" name="correo" type="email"
+                        maxlength="120" autocomplete="email" required>
+                </div>
+
+                <div>
+                    <label for="edad">Edad (opcional)</label>
+                    <input id="edad" name="edad" type="number"
+                        min="1" max="120">
+                </div>
+
+                <div>
+                    <label for="mascota">¿Qué mascota prefieres? *</label>
+
+                    <select id="mascota" name="mascota" required>
+                        <option value="">Selecciona una opción</option>
+                        <option>Perro</option>
+                        <option>Gato</option>
+                        <option>Ambos</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="raza">Raza favorita (opcional)</label>
+                    <input id="raza" name="raza" type="text" maxlength="60">
+                </div>
+
+                <div>
+                    <label for="cantidad">¿Cuántas mascotas tienes?</label>
+                    <input id="cantidad" name="cantidad" type="number"
+                        min="0" max="50" value="0">
+                </div>
+
+            </div>
+
+            <label for="comentarios">
+                Cuéntanos sobre tu mascota (opcional)
+            </label>
+
+            <textarea id="comentarios" name="comentarios"
+                rows="4" maxlength="500"></textarea>
+
+            <label class="casilla">
+                <input type="checkbox" id="adopcion" name="adopcion">
+                Me interesa conocer más sobre la adopción responsable.
+            </label>
+
+            <div class="acciones">
+
+                <button class="boton" type="submit">
+                    Enviar respuestas
+                </button>
+
+                <button class="boton boton-secundario" type="reset">
+                    Limpiar formulario
+                </button>
+
+            </div>
+
+            <p id="mensaje-formulario" class="mensaje"
+                role="status" aria-live="polite"></p>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<!-- PIE DE PÁGINA -->
+
+<footer class="pie">
+
+    <div class="contenedor">
+
+        <p>
+            <strong>🐾 Mundo de Mascotas</strong>
+            — Proyecto académico de Desarrollo Web I.
+        </p>
+
+        <p>
+            Desarrollado con HTML5, CSS3 y JavaScript.
+            <a href="#inicio">Volver al inicio ↑</a>
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
